@@ -1,7 +1,8 @@
+require('dotenv').config();
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const baseUrl = 'https://www.auto-data.net';
+const baseUrl = process.env.BASE_URL;
 
 async function scrapeAutoData() {
     try {
@@ -69,3 +70,5 @@ async function scrapeAutoData() {
 }
 
 scrapeAutoData();
+
+
